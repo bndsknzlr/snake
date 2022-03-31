@@ -20,8 +20,8 @@ screen.listen()
 
 screen.onkey(fun=snake.up, key="Up")
 screen.onkey(fun=snake.down, key="Down")
-screen.onkey(fun=snake.left, key="Left")
-screen.onkey(fun=snake.right, key="Right")
+screen.onkey(fun=snake.b_left, key="Left")
+screen.onkey(fun=snake.b_right, key="Right")
 
 game_on = True
 collisions = 0
@@ -32,9 +32,14 @@ while game_on:
     if snake.head.distance(food) < 15:
         scoreboard.get_score()
         food.refresh()
+        snake.extend()
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         game_on = False
         scoreboard.game_over()
+    for collide in snake.segments[1:]:
+        if snake.head.distance(collide) < 15:
+            game_on = False
+            scoreboard.game_over()
 
 
 # TODO : 6. detect collision with wall
