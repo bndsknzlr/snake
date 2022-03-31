@@ -7,9 +7,12 @@ LEFT = 180
 RIGHT = 0
 
 
-class Snake:
+class Snake(Turtle):
 
     def __init__(self):
+        super().__init__()
+        self.xcor()
+        self.ycor()
         self.segments = []
         self.create()
         self.head = self.segments[0]
@@ -50,3 +53,4 @@ class Snake:
 
     def grow_tail(self):
         pass
+
