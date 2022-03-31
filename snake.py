@@ -64,4 +64,3 @@ class Snake(Turtle):
 
     def grow_tail(self):
         pass
-

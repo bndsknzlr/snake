@@ -41,8 +41,4 @@ while game_on:
             game_on = False
             scoreboard.game_over()
 
-
-# TODO : 6. detect collision with wall
-# TODO : 7. detect collision with tail
-
 screen.exitonclick()
