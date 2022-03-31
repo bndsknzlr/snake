@@ -47,3 +47,6 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+
+    def grow_tail(self):
+        pass
