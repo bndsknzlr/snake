@@ -4,6 +4,12 @@ from food import Food
 from scoreboard import Scoreboard
 import time
 
+from vlc import MediaPlayer, PlaybackMode
+
+p = MediaPlayer("/Users/achimsondermann/Music/Splice/sounds/packs/Chiptune/SM_White_Label_-_Chiptune_-_Wav/drum_loops/ct_drm128_ascension_top.mp3")
+pm = PlaybackMode(1)
+
+p.play()
 
 screen = Screen()
 screen.setup(width=600, height=600)
