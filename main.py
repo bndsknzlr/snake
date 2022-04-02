@@ -27,6 +27,7 @@ playlist = ["/Users/achimsondermann/Music/Splice/sounds/packs/"
             "Chiptune/""SM_White_Label_-_Chiptune_-_Wav/drum_loops/ct_drm128_ascension_top.mp3"]
 
 player = vlc.MediaPlayer(playlist[0])
+player.audio_set_volume(70)
 game_on = True
 while game_on:
     player.play()
