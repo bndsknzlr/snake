@@ -34,6 +34,8 @@ while game_on:
     time.sleep(0.1)
     snake.move()
     if snake.head.distance(food) < 15:
+        player = vlc.MediaPlayer("/Users/achimsondermann/Music/Splice/sounds/packs/Chip Drums/"
+                                 "Chip_Drums/ATARI_2600/BULLYFINGER_chiptune_drum_one_shot_atari_2600_11.wav")
         scoreboard.get_score()
         food.refresh()
         snake.extend()
